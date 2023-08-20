@@ -19,5 +19,7 @@ function twoSum(nums: number[], target: number): number[] {
     }
     return [];
 };
+
+console.log(twoSum([3, 2, 4], 6));
 // @lc code=end
 
