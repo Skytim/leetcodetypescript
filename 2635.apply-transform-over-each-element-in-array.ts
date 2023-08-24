@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function map(arr: number[], fn: (n: number, i: number) => number): number[] {
+export function map(arr: number[], fn: (n: number, i: number) => number): number[] {
     let result: number[] = [];
     arr.forEach((item, index) => {
         result.push(fn(item, index));
@@ -19,4 +19,16 @@ function plusone(n: number) {
     return n + 1;
 }
 
-const newArray = map(arr, plusone);
+console.log(map(arr, plusone));
+
+function plusI(n: number, i: number) {
+    return n + i;
+}
+
+console.log(map(arr, plusI));
+
+function constant() {
+    return 42;
+}
+
+console.log(map(arr, constant));
