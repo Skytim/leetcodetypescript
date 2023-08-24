@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function createCounter(n: number): () => number {
+export function createCounter(n: number): () => number {
     return function () {
         return n++;
     };
