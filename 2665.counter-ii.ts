@@ -11,7 +11,7 @@ type ReturnObj = {
     reset: () => number,
 }
 
-function createCounter(init: number): ReturnObj {
+export function createCounter(init: number): ReturnObj {
     let n = init;
     return {
         increment: () => {
