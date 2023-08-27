@@ -1,4 +1,4 @@
-namespace HelloTypescript {
+module HelloTypescript {
     // function sayHello(person: string) {
     //     return 'Hello, ' + person;
     // }
