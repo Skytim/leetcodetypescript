@@ -1,3 +1,16 @@
+import { name, getName, Animal, Directions, Options } from "foo";
+import { foo } from "poo";
+import boo from "boo";
+
+// 整體匯入
+const fooq = require('foo');
+// 單個匯入
+const name2 = require('foo').name
+
+// 整體匯入
+import foo3 = require('foo');
+// 單個匯入
+import bar = foo.bar;
 module DeclarationFiles {
     // src/jQuery.d.ts
     // declare var
@@ -113,10 +126,79 @@ module DeclarationFiles {
     }
 
     let settings: AjaxSettings = {
-        method: 'POST',
+        method: "POST",
         data: {
-            name: 'foo'
-        }
+            name: "foo",
+        },
     };
-    jQuery8.ajax('/api/post_something', settings);
+    jQuery8.ajax("/api/post_something", settings);
+
+    // src/jQuery.d.ts
+
+    declare namespace jQuery9 {
+        interface AjaxSettings {
+            method?: "GET" | "POST";
+            data?: any;
+        }
+        function ajax(url: string, settings?: AjaxSettings): void;
+    }
+
+    // src/index.ts
+
+    let settings2: jQuery9.AjaxSettings = {
+        method: "POST",
+        data: {
+            name: "foo",
+        },
+    };
+    jQuery9.ajax("/api/post_something", settings2);
+
+    // src/jQuery.d.ts
+
+    declare function jQuery10(selector: string): any;
+    declare namespace jQuery10 {
+        function ajax(url: string, settings?: any): void;
+    }
+
+    // src/index.ts
+
+    jQuery10("#foo");
+    jQuery10.ajax("/api/get_something");
+
+    console.log(name);
+    let myName = getName();
+    let tommy = new Animal("Tom");
+    let directions2 = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
+    let options: Options = {
+        data: {
+            name: "foo",
+        },
+    };
+
+    console.log(foo.name);
+    foo.bar.baz();
+
+    boo();
+    console.log(name2);
+
+    console.log(fooq.name);
+
+    /// 直接擴充套件全域變數(Cann't work)
+    interface String {
+        prependHello(): string;
+    }
+    
+    'foo'.prependHello();
+
+
+    // src/index.ts
+    
+    'bar'.prependHello();
+}
+
+
+declare global {
+    interface String {
+        prependHello(): string;
+    }
 }

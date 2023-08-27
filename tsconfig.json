@@ -1,17 +1,21 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "es5"
-    ],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    // "noEmitOnError":true
-  }
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["es5", "DOM"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist",
+        "sourceMap": true,
+        // "noEmitOnError":true
+        "baseUrl": "./",
+        "paths": {
+            "*": ["types/*"]
+        }
+        /// 自動產生宣告檔案
+        // "declaration": true,
+    }
 }
