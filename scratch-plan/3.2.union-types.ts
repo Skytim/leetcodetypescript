@@ -1,4 +1,4 @@
-namespace UnionTypes {
+module UnionTypes {
     let myFavoriteNumber: string | number;
     myFavoriteNumber = "seven";
     myFavoriteNumber = 7;
