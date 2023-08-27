@@ -1,4 +1,4 @@
-namespace Interface {
+module Interface {
     interface Person {
         name: string;
         age: number;

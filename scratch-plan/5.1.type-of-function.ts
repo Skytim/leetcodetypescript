@@ -1,4 +1,4 @@
-namespace TypeOfFunction {
+module TypeOfFunction {
     // 函式宣告（Function Declaration）
     function sum(x: number, y: number) {
         return x + y;
