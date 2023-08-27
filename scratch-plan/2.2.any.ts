@@ -1,4 +1,4 @@
-namespace Any {
+module Any {
     // let myFavoriteNumber: string = 'seven';
     // myFavoriteNumber = 7;
 
