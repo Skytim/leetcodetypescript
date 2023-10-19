@@ -10,10 +10,11 @@ module buildInObjects {
         // Do something
     });
 
-    Math.pow(10, "2");
+    // Math.pow(10, "2");
+    Math.pow(10, 2);
 
     document.addEventListener("click", function (e) {
-        console.log(e.targetCurrent);
+        console.log(e.currentTarget);
     });
     
 }

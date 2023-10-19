@@ -25,9 +25,9 @@ module DeclarationFiles {
 
     jQuery2("#foo");
     // 使用 declare const 定義的 jQuery 型別，禁止修改這個全域變數
-    jQuery2 = function (selector) {
-        return document.querySelector(selector);
-    };
+    // jQuery2 = function (selector) {
+    //     return document.querySelector(selector);
+    // };
     /// declare function
     declare function jQuery3(selector: string): any;
 
@@ -42,9 +42,9 @@ module DeclarationFiles {
     declare class Human {
         name: string;
         constructor(name: string);
-        sayHi() {
-            return `My name is ${this.name}`;
-        }
+        // sayHi() {
+        //     return `My name is ${this.name}`;
+        // }
         // ERROR: An implementation cannot be declared in ambient contexts.
     }
 
@@ -97,7 +97,7 @@ module DeclarationFiles {
     jQuery6.fn.extend({
         check: function () {
             return this.each(function () {
-                this.checked = true;
+                // this.checked = true;
             });
         },
     });
@@ -112,7 +112,7 @@ module DeclarationFiles {
     jQuery7.fn.extend({
         check: function () {
             return this.each(function () {
-                this.checked = true;
+                // this.checked = true;
             });
         },
     });

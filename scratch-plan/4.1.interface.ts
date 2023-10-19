@@ -2,6 +2,7 @@ module Interface {
     interface Person {
         name: string;
         age: number;
+        [propName: string]: any;
     }
 
     let tom: Person = {
@@ -11,8 +12,9 @@ module Interface {
 
     let tony: Person = {
         name: "Tom",
+        age:5
     };
-
+    console.log(tony); // undefined
     interface Dog {
         name: string;
         age?: number;
@@ -63,6 +65,6 @@ module Interface {
         gender: "male",
     };
 
-    thin.id = 9527;
+    // thin.id = 9527;
     // index.ts(14,5): error TS2540: Cannot assign to 'id' because it is a constant or a read-only property.
 }

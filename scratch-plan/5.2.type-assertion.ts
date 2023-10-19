@@ -1,11 +1,11 @@
 module TypeAssertion {
-    function getLength1(something: string | number): number {
-        return something.length;
+    function getLength1(something: string | number): string | number {
+        return something;
     }
 
-    function getLength2(something: string | number): number {
-        if (something.length) {
-            return something.length;
+    function getLength2(something: string | number): string | number {
+        if (something) {
+            return something;
         } else {
             return something.toString().length;
         }
@@ -20,8 +20,8 @@ module TypeAssertion {
         }
     }
 
-    function toBoolean(something: string | number): boolean {
+    function toBoolean(something: string | number): string | number {
         /// 轉型
-        return <boolean>something;
+        return something;
     }
 }

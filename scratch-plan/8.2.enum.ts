@@ -69,9 +69,9 @@ module Enum {
     enum Color2 {
         Red = "red".length,
         // index.ts(1,33): error TS1061: Enum member must have initializer.
-        Green,
-        // index.ts(1,40): error TS1061: Enum member must have initializer.
-        Blue,
+        // Green,
+        // // index.ts(1,40): error TS1061: Enum member must have initializer.
+        // Blue,
     }
 
     const enum Directions {

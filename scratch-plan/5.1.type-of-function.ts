@@ -43,7 +43,7 @@ module TypeOfFunction {
     let tomcat = buildName("Tom", "Cat");
     let tom = buildName("Tom");
 
-    function buildName2(firstName?: string, lastName: string) {
+    function buildName2(firstName: string|undefined, lastName?: string) {
         if (firstName) {
             return firstName + " " + lastName;
         } else {
