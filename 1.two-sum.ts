@@ -6,6 +6,16 @@
 
 // @lc code=start
 function twoSum(nums: number[], target: number) {
+    /// 1. Brute Force
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+    return [];
+    /// 2. Two-pass Hash Table
     const map = new Map<number, number>();
     for (let i = 0; i < nums.length; i++) {
         const x = target - nums[i];
