@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode id=2700 lang=typescript
  *
- * [2620] Differences Between Two Objects
+ * [2700] Differences Between Two Objects
  */
 
 // @lc code=start
