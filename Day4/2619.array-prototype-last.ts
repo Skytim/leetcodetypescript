@@ -9,6 +9,7 @@
 declare global {
     interface Array<T> {
         last(): T | -1;
+        groupBy(fn: (item: T) => string): Record<string, T[]>;
     }
 }
 
